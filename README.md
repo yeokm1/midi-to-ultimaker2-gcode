@@ -1,5 +1,5 @@
 # midi-to-simple-metal-gcode
-Convert a MIDI music file to gcode instructions compatible with the Printrbot Simple Metal. The conversion code was obtained from where this repository was [forked from](https://github.com/mpatoulachik/MIDI-to-CNC).
+Convert a MIDI music file to gcode instructions compatible with the Printrbot Simple Metal. The conversion code was obtained from where this repository was [forked from](https://github.com/michthom/MIDI-to-CNC).
 
 The concept behind how a 3D printer can generate musical tunes is explained [here](http://zeroinnovations.com/3dprinting/how-to-play-the-imperial-march-on-a-3d-printer.html). That author also uses a Printrbot Simple Metal as well but did not mention his instructions so I created a short tutorial below.
 
@@ -31,7 +31,7 @@ python mid2cnc.py -infile midi_files/national_anthem_singapore.mid -outfile gcod
 Replace the relevant paths with paths to your input and output file. I have set the bed size at a conservative 120mm x 120mm x 120mm although the Printrbot Simple Metal can go up to 150mm x 150mm x 150mm.  
 The "-verbose" argument is optional.
 
-To know what each argument means, check out the original [readme file](README.txt).
+To know what each argument means, check out the original [readme file](README).
 
 ###2. Make some modifications to the generated Gcode file
 
