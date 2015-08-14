@@ -44,11 +44,10 @@ G92 X0 Y0 Z0
 The generated Gcode file seems a little "screwed" at the start because they set the origin at the current position then attempt to move to it (current position) which results in no movement. I removed the other stuff as they have no impact on the musical output.
 
 ###3. "Print" the Gcode
-Send the Gcode file to your printer using your favourite 3D-printer control software. I happen to use Repetier-Host but others should work just as well. 
+Copy the Gcode file to the SD card and just let the Ultimaker 2 handle the printing.
 
 ##Dependencies
 1. Python 2
-2. Repetier-Host (Any other 3D-Printer control software that allows you to send custom Gcode commands should be fine too)
 
 ##Resources
 1. [Singapore National Anthem Midi file](http://www.midiworld.com/download/4159)
