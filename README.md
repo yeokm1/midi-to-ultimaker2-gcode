@@ -1,14 +1,14 @@
 # midi-to-simple-metal-gcode
 Convert a MIDI music file to gcode instructions compatible with the Ultimaker 2. The conversion code was obtained from where this repository was [forked from](https://github.com/michthom/MIDI-to-CNC).
 
-The concept behind how a 3D printer can generate musical tunes is explained [here](http://zeroinnovations.com/how-to-play-the-imperial-march-on-a-3d-printer/). That author also uses a Printrbot Simple Metal as well but did not mention his instructions so I created a short tutorial below.
+The concept behind how a 3D printer can generate musical tunes is explained [here](http://zeroinnovations.com/how-to-play-the-imperial-march-on-a-3d-printer/).
 
 ##Demo videos on Youtube
 To be added...
 
 The Gcode for these are placed inside ```gcode_files``` directory.
 
-##How to convert a midi file for the Printrbot Simple Metal?
+##How to convert a midi file for the Ultimaker 2?
 
 Not all midi files can be supported or be converted properly. If my understanding is correct, only 3 notes can be played concurrently at any one time as there are only 3 axes motors available. The code will randomly pick any three notes if there are too many concurrent note playbacks. 
 
