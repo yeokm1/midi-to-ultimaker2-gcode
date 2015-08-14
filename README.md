@@ -1,20 +1,10 @@
 # midi-to-simple-metal-gcode
-Convert a MIDI music file to gcode instructions compatible with the Printrbot Simple Metal. The conversion code was obtained from where this repository was [forked from](https://github.com/michthom/MIDI-to-CNC).
+Convert a MIDI music file to gcode instructions compatible with the Ultimaker 2. The conversion code was obtained from where this repository was [forked from](https://github.com/michthom/MIDI-to-CNC).
 
 The concept behind how a 3D printer can generate musical tunes is explained [here](http://zeroinnovations.com/how-to-play-the-imperial-march-on-a-3d-printer/). That author also uses a Printrbot Simple Metal as well but did not mention his instructions so I created a short tutorial below.
 
 ##Demo videos on Youtube
-[![](http://img.youtube.com/vi/PI1DXdU53Ps/0.jpg)](https://www.youtube.com/watch?v=PI1DXdU53Ps)
-
-Playing the Singapore National Anthem. 
-
-[![](http://img.youtube.com/vi/rh3QHoTB2Ts/0.jpg)](https://www.youtube.com/watch?v=rh3QHoTB2Ts)
-
-Portal Still Alive.
-
-[![](http://img.youtube.com/vi/en3cRWAqXwg/0.jpg)](https://www.youtube.com/watch?v=en3cRWAqXwg)
-
-Fringe opening theme. The reference piano-video for this can be viewed [here](http://www.youtube.com/watch?v=oOMQ1LWBasw).
+To be added...
 
 The Gcode for these are placed inside ```gcode_files``` directory.
 
@@ -24,11 +14,11 @@ Not all midi files can be supported or be converted properly. If my understandin
 
 ###1. Generate the Gcode file
 ```bash
-git clone https://github.com/yeokm1/midi-to-simple-metal-gcode.git
-cd midi-to-simple-metal-gcode
-python mid2cnc.py -infile midi_files/national_anthem_singapore.mid -outfile gcode_files/singapore_national_anthem.gcode -machine custom -units metric -ppu 80 80 2020 -safemin 0 0 0 -safemax 120 120 120 -verbose
+git clone https://github.com/yeokm1/midi-to-ultimaker2-gcode.git
+cd midi-to-ultimaker2-gcode
+python mid2cnc.py -infile midi_files/national_anthem_singapore.mid -outfile gcode_files/singapore_national_anthem.gcode -machine custom -units metric -ppu 80 80 3200 -safemin 25 25 25 -safemax 170 170 170 -verbose
 ```
-Replace the relevant paths with paths to your input and output file. I have set the bed size at a conservative 120mm x 120mm x 120mm although the Printrbot Simple Metal can go up to 150mm x 150mm x 150mm.  
+Replace the relevant paths with paths to your input and output file. I have set the bed size quite small although the Ultimaker 2 can go much larger to prevent going to near the edges.  
 The "-verbose" argument is optional.
 
 To know what each argument means, check out the original [readme file](README).
@@ -46,7 +36,8 @@ G04 P0.0000
 ```
 with 
 ```bash
-G0 X0 Y0 Z0 F2000.0
+M107
+G0 F7200 X25 Y25 Z170
 G92 X0 Y0 Z0
 ```
 
