@@ -21,7 +21,7 @@ git clone https://github.com/yeokm1/midi-to-ultimaker2-gcode.git
 cd midi-to-ultimaker2-gcode
 python mid2cnc.py -infile midi_files/national_anthem_singapore.mid -outfile gcode_files/singapore_national_anthem.gcode -machine custom -units metric -ppu 80 80 3200 -safemin 25 25 25 -safemax 170 170 170 -axes X -verbose
 ```
-Replace the relevant paths with paths to your input and output file. I have set the bed size quite small although the Ultimaker 2 can go much larger to prevent going too near the edges.  
+Replace the relevant paths with paths to your input and output file. I have set the bed size quite small although the Ultimaker 2 can go much larger to prevent the extruder from going too near the edges.  
 The "-verbose" argument is optional.
 
 To know what each argument means, check out the original [readme file](README).
