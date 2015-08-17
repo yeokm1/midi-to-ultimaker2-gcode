@@ -4,7 +4,10 @@ Convert a MIDI music file to gcode instructions compatible with the Ultimaker 2.
 The concept behind how a 3D printer can generate musical tunes is explained [here](http://zeroinnovations.com/how-to-play-the-imperial-march-on-a-3d-printer/).
 
 ##Demo videos on Youtube
-To be added...
+
+Playing the Singapore National Anthem. 
+
+[![](http://img.youtube.com/vi/4op7vfobDcA/0.jpg)](https://www.youtube.com/watch?v=4op7vfobDcA)
 
 The Gcode for these are placed inside ```gcode_files``` directory.
 
